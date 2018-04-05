@@ -47,11 +47,20 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom"
+    "test": "node scripts/test.js --env=jsdom && codecov"
   },
   "jest": {
+    "collectCoverage": true,
     "collectCoverageFrom": [
-      "src/**/*.{js,jsx,mjs}"
+      "src/**/*.{js,jsx,mjs}",
+      "scripts/**/*.js"
+    ],
+    "coverageDirectory": "coverage",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "<rootDir>/lib/",
+      "<rootDir>/scripts/",
+      "<rootDir>/build"
     ],
     "setupFiles": [
       "<rootDir>/config/polyfills.js"
@@ -90,5 +99,9 @@
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "devDependencies": {
+    "codecov": "^3.0.0",
+    "jest-cli": "^22.4.3"
   }
 }
