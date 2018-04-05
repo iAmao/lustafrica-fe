@@ -1,0 +1,14 @@
+{
+  "name": "lustafrica-fe",
+  "version": "1.0.0",
+  "description": "Lustafrica Frontend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "lustafrica"
+  ],
+  "author": "Inumidun Amao",
+  "license": "ISC"
+}
